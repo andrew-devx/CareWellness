@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <rect width="32" height="32" rx="8" fill="#137fec"/>
+
+  <!-- Heart shape -->
+  <path
+    d="M16 24s-9-5.5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 11-9 11z"
+    fill="white"
+    fill-opacity="0.15"
+    stroke="white"
+    stroke-width="0"
+  />
+
+  <!-- ECG / pulse line through heart -->
+  <path
+    d="M7 16h3l2-4 2 8 2-6 1.5 3H25"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Heart outline -->
+  <path
+    d="M16 23.5C16 23.5 7.5 18.2 7.5 12.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2c0 5.7-8.5 11-8.5 11z"
+    stroke="white"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>

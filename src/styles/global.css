@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #137fec;
+  --color-primary-dark: #0f6bc9;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #101922;
+  --font-family-display: "Inter", sans-serif;
+}
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    @apply antialiased;
+  }
+
+  button,
+  [role="button"],
+  a,
+  summary,
+  select {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .medical-gradient {
+    background: linear-gradient(135deg, rgba(19, 127, 236, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  .dark .medical-gradient {
+    background: linear-gradient(135deg, rgba(19, 127, 236, 0.08) 0%, rgba(16, 25, 34, 1) 100%);
+  }
+}

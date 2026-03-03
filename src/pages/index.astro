@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import TrustBar from "../components/TrustBar";
+import Services from "../components/Services";
+import BookingModal from "../components/BookingModal";
+import Facilities from "../components/Facilities";
+import Testimonials from "../components/Testimonials";
+import WhyChooseUs from "../components/WhyChooseUs";
+import PatientJourney from "../components/PatientJourney";
+import FAQ from "../components/FAQ";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>CareWellness — World-Class Healthcare Designed Around You</title>
+    <meta
+      name="description"
+      content="Experience a new standard of medical excellence at CareWellness. Board-certified specialists, cutting-edge diagnostics, and compassionate care for every stage of life."
+    />
+    <meta name="keywords" content="healthcare, medical, wellness, doctors, pediatric, specialist clinics, diagnostics, executive wellness" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CareWellness — World-Class Healthcare Designed Around You" />
+    <meta
+      property="og:description"
+      content="Rated 4.9/5 by over 10,000 patients. Comprehensive care for your entire family — from executive wellness to pediatric excellence."
+    />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuDajwrxcxQ8mOnrSlpV7aL2CYsGim_2qPOP_S1g2bhgDfflGV_YgOqSc5bnus13hyZNqUYg5uboXap82geZDrGWfa5JLgp_Z7g97b5M7tKXv420qYhrPpNfhz8duDDGi-x2u2WMel-UOO_eHD20CrjaPha___0Xl5TImdH44B5S1jwpvl1Ll2vVjgx9aoepZv8KOw-_eKh1uWkHlddcDti820ztCoNLx-VDGoioF2avZHgyblMIcd6P-WIKE9_owtjBd_XsQUYI8Q" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CareWellness — World-Class Healthcare" />
+    <meta name="twitter:description" content="Rated 4.9/5 by over 10,000 patients. Book your appointment today." />
+
+    <!-- Google Fonts preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[#f6f7f8] text-slate-900 antialiased">
+    <!-- Global booking modal — listens for open-booking-modal custom event -->
+    <BookingModal client:load />
+    <!-- Navbar: client:load for immediate interactivity (hamburger menu) -->
+    <Navbar client:load />
+
+    <main>
+      <!-- Hero: client:load for immediate animations above the fold -->
+      <Hero client:load />
+
+      <!-- Below-fold sections: client:visible for deferred hydration -->
+      <TrustBar client:visible />
+      <Services client:visible />
+      <WhyChooseUs client:visible />
+      <Facilities client:visible />
+      <Testimonials client:visible />
+      <PatientJourney client:visible />
+      <FAQ client:visible />
+      <CTA client:visible />
+    </main>
+
+    <!-- Footer: static, no interactivity needed -->
+    <Footer />
+  </body>
+</html>
